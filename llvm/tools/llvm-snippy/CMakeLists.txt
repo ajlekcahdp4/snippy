@@ -121,7 +121,11 @@ foreach(proj ${LLVM_SNIPPY_TARGETS_LIST})
   target_link_libraries(llvm-snippy PRIVATE ${tgt})
 endforeach()
 
-
 add_dependencies(llvm-snippy lld)
+
+install(TARGETS llvm-snippy
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
+  COMPONENT llvm-snippy
+)
 
 

@@ -19,6 +19,7 @@ stdenv.mkDerivation {
     "-DLLVM_INCLUDE_UTILS=FALSE"
     "-DLLVM_INCLUDE_TESTS=FALSE"
     "-DLLVM_INCLUDE_BENCHMARKS=FALSE"
+    "-DCOMPONENT=llvm-snippy"
   ];
   ninjaFlags = [
     "llvm-snippy"
