@@ -127,5 +127,9 @@ install(TARGETS llvm-snippy
   DESTINATION ${CMAKE_INSTALL_BINDIR}
   COMPONENT llvm-snippy
 )
+install (FILES $<TARGET_FILE:lld>
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
+  COMPONENT llvm-snippy
+)
 
 
