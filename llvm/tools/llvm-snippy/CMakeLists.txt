@@ -124,4 +124,17 @@ endforeach()
 
 add_dependencies(llvm-snippy lld)
 
+install(TARGETS llvm-snippy
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
+  COMPONENT llvm-snippy
+)
+install(FILES $<TARGET_FILE:lld>
+  DESTINATION ${CMAKE_INSTALL_BINDIR}
+  PERMISSIONS
+    OWNER_READ OWNER_WRITE OWNER_EXECUTE
+    GROUP_READ GROUP_EXECUTE
+    WORLD_READ WORLD_EXECUTE
+  RENAME ld.lld
+  COMPONENT llvm-snippy
+)
 
